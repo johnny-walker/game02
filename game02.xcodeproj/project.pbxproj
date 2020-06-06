@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5014C850248BC1760084D08A /* particle_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5014C84E248BC1760084D08A /* particle_generator.cpp */; };
+		5014C85A248BCB130084D08A /* post_processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5014C858248BCB120084D08A /* post_processor.cpp */; };
+		5014C864248BE2D30084D08A /* game_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5014C85D248BE2D20084D08A /* game_object.cpp */; };
+		5014C865248BE2D30084D08A /* ball_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5014C85E248BE2D20084D08A /* ball_object.cpp */; };
+		5014C866248BE2D30084D08A /* game_level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5014C862248BE2D30084D08A /* game_level.cpp */; };
+		5014C867248BE2D30084D08A /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5014C863248BE2D30084D08A /* game.cpp */; };
+		50C613E02477C31900DC892B /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 50C613DF2477C31900DC892B /* glad.c */; };
+		50C613E42477CC2E00DC892B /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C613E32477CC2E00DC892B /* libglfw.3.3.dylib */; };
+		50F2E5CC2483A323005BFCA4 /* resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F2E5CB2483A323005BFCA4 /* resource_manager.cpp */; };
+		50F2E5CF2483A422005BFCA4 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F2E5CD2483A422005BFCA4 /* shader.cpp */; };
+		50F2E5D22483A42F005BFCA4 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F2E5D12483A42F005BFCA4 /* texture.cpp */; };
+		50F2E5D42483A493005BFCA4 /* program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F2E5D32483A493005BFCA4 /* program.cpp */; };
+		50F2E5D92483A9D4005BFCA4 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F2E5D82483A9D4005BFCA4 /* stb_image.cpp */; };
+		50F2E5E32483DFDB005BFCA4 /* sprite_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F2E5E12483DFDB005BFCA4 /* sprite_renderer.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50C613CF2477C26000DC892B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5014C84E248BC1760084D08A /* particle_generator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_generator.cpp; sourceTree = "<group>"; };
+		5014C84F248BC1760084D08A /* particle_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_generator.h; sourceTree = "<group>"; };
+		5014C851248BC37A0084D08A /* particle.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = particle.fs; sourceTree = "<group>"; };
+		5014C852248BC37A0084D08A /* sprite.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = sprite.fs; sourceTree = "<group>"; };
+		5014C853248BC37A0084D08A /* sprite.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = sprite.vs; sourceTree = "<group>"; };
+		5014C854248BC37A0084D08A /* particle.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = particle.vs; sourceTree = "<group>"; };
+		5014C856248BC9FC0084D08A /* post_processing.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = post_processing.vs; sourceTree = "<group>"; };
+		5014C857248BCAAE0084D08A /* post_processing.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = post_processing.fs; sourceTree = "<group>"; };
+		5014C858248BCB120084D08A /* post_processor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = post_processor.cpp; sourceTree = "<group>"; };
+		5014C859248BCB130084D08A /* post_processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = post_processor.h; sourceTree = "<group>"; };
+		5014C85B248BD4B70084D08A /* levels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = levels; sourceTree = "<group>"; };
+		5014C85C248BE2D20084D08A /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
+		5014C85D248BE2D20084D08A /* game_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game_object.cpp; sourceTree = "<group>"; };
+		5014C85E248BE2D20084D08A /* ball_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ball_object.cpp; sourceTree = "<group>"; };
+		5014C85F248BE2D20084D08A /* game_level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_level.h; sourceTree = "<group>"; };
+		5014C860248BE2D20084D08A /* ball_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ball_object.h; sourceTree = "<group>"; };
+		5014C861248BE2D30084D08A /* game_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_object.h; sourceTree = "<group>"; };
+		5014C862248BE2D30084D08A /* game_level.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game_level.cpp; sourceTree = "<group>"; };
+		5014C863248BE2D30084D08A /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		50C613D12477C26000DC892B /* game02 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = game02; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C613DF2477C31900DC892B /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		50C613E32477CC2E00DC892B /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libglfw.3.3.dylib; sourceTree = "<group>"; };
+		50F2E5CA2483A323005BFCA4 /* resource_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resource_manager.h; sourceTree = "<group>"; };
+		50F2E5CB2483A323005BFCA4 /* resource_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resource_manager.cpp; sourceTree = "<group>"; };
+		50F2E5CD2483A422005BFCA4 /* shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
+		50F2E5CE2483A422005BFCA4 /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
+		50F2E5D02483A42F005BFCA4 /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
+		50F2E5D12483A42F005BFCA4 /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+		50F2E5D32483A493005BFCA4 /* program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program.cpp; sourceTree = "<group>"; };
+		50F2E5D72483A9C9005BFCA4 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		50F2E5D82483A9D4005BFCA4 /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
+		50F2E5E12483DFDB005BFCA4 /* sprite_renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sprite_renderer.cpp; sourceTree = "<group>"; };
+		50F2E5E22483DFDB005BFCA4 /* sprite_renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sprite_renderer.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50C613CE2477C26000DC892B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C613E42477CC2E00DC892B /* libglfw.3.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5014C868248BE30A0084D08A /* header */ = {
+			isa = PBXGroup;
+			children = (
+				5014C860248BE2D20084D08A /* ball_object.h */,
+				5014C85C248BE2D20084D08A /* game.h */,
+				5014C85F248BE2D20084D08A /* game_level.h */,
+				5014C861248BE2D30084D08A /* game_object.h */,
+				5014C84F248BC1760084D08A /* particle_generator.h */,
+				5014C859248BCB130084D08A /* post_processor.h */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		50C613C82477C25F00DC892B = {
+			isa = PBXGroup;
+			children = (
+				50C613D32477C26000DC892B /* game02 */,
+				50C613D22477C26000DC892B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50C613D22477C26000DC892B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50C613D12477C26000DC892B /* game02 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50C613D32477C26000DC892B /* game02 */ = {
+			isa = PBXGroup;
+			children = (
+				5014C868248BE30A0084D08A /* header */,
+				50C613DF2477C31900DC892B /* glad.c */,
+				50F2E5D32483A493005BFCA4 /* program.cpp */,
+				5014C863248BE2D30084D08A /* game.cpp */,
+				5014C862248BE2D30084D08A /* game_level.cpp */,
+				5014C85D248BE2D20084D08A /* game_object.cpp */,
+				5014C85E248BE2D20084D08A /* ball_object.cpp */,
+				5014C84E248BC1760084D08A /* particle_generator.cpp */,
+				5014C858248BCB120084D08A /* post_processor.cpp */,
+				5014C85B248BD4B70084D08A /* levels */,
+				50C613E52477CCA700DC892B /* shaders */,
+				50F2E5DA2483AA4D005BFCA4 /* Tools */,
+			);
+			path = game02;
+			sourceTree = "<group>";
+		};
+		50C613E52477CCA700DC892B /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				5014C853248BC37A0084D08A /* sprite.vs */,
+				5014C852248BC37A0084D08A /* sprite.fs */,
+				5014C854248BC37A0084D08A /* particle.vs */,
+				5014C851248BC37A0084D08A /* particle.fs */,
+				5014C856248BC9FC0084D08A /* post_processing.vs */,
+				5014C857248BCAAE0084D08A /* post_processing.fs */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		50F2E5DA2483AA4D005BFCA4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				50F2E5DC2483AB10005BFCA4 /* Libs */,
+				50F2E5DB2483AA85005BFCA4 /* Headers */,
+				50F2E5D82483A9D4005BFCA4 /* stb_image.cpp */,
+				50F2E5CB2483A323005BFCA4 /* resource_manager.cpp */,
+				50F2E5E12483DFDB005BFCA4 /* sprite_renderer.cpp */,
+				50F2E5D12483A42F005BFCA4 /* texture.cpp */,
+				50F2E5CD2483A422005BFCA4 /* shader.cpp */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		50F2E5DB2483AA85005BFCA4 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				50F2E5D72483A9C9005BFCA4 /* stb_image.h */,
+				50F2E5CA2483A323005BFCA4 /* resource_manager.h */,
+				50F2E5E22483DFDB005BFCA4 /* sprite_renderer.h */,
+				50F2E5D02483A42F005BFCA4 /* texture.h */,
+				50F2E5CE2483A422005BFCA4 /* shader.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		50F2E5DC2483AB10005BFCA4 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				50C613E32477CC2E00DC892B /* libglfw.3.3.dylib */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50C613D02477C26000DC892B /* game02 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C613D82477C26000DC892B /* Build configuration list for PBXNativeTarget "game02" */;
+			buildPhases = (
+				50C613CD2477C26000DC892B /* Sources */,
+				50C613CE2477C26000DC892B /* Frameworks */,
+				50C613CF2477C26000DC892B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = game02;
+			productName = openGL02;
+			productReference = 50C613D12477C26000DC892B /* game02 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50C613C92477C25F00DC892B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = com.albert;
+				TargetAttributes = {
+					50C613D02477C26000DC892B = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 50C613CC2477C26000DC892B /* Build configuration list for PBXProject "game02" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50C613C82477C25F00DC892B;
+			productRefGroup = 50C613D22477C26000DC892B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50C613D02477C26000DC892B /* game02 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50C613CD2477C26000DC892B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5014C867248BE2D30084D08A /* game.cpp in Sources */,
+				50F2E5D42483A493005BFCA4 /* program.cpp in Sources */,
+				5014C850248BC1760084D08A /* particle_generator.cpp in Sources */,
+				5014C864248BE2D30084D08A /* game_object.cpp in Sources */,
+				50F2E5E32483DFDB005BFCA4 /* sprite_renderer.cpp in Sources */,
+				5014C866248BE2D30084D08A /* game_level.cpp in Sources */,
+				5014C85A248BCB130084D08A /* post_processor.cpp in Sources */,
+				50F2E5D92483A9D4005BFCA4 /* stb_image.cpp in Sources */,
+				50F2E5CF2483A422005BFCA4 /* shader.cpp in Sources */,
+				50F2E5D22483A42F005BFCA4 /* texture.cpp in Sources */,
+				50C613E02477C31900DC892B /* glad.c in Sources */,
+				50F2E5CC2483A323005BFCA4 /* resource_manager.cpp in Sources */,
+				5014C865248BE2D30084D08A /* ball_object.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		50C613D62477C26000DC892B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		50C613D72477C26000DC892B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		50C613D92477C26000DC892B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"${glfw_header}",
+					"${glad_header}",
+					/usr/local/include,
+					"${assimp_header}",
+					/usr/local/include/glm,
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"${glfw_Header}",
+					"${glad_header}",
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openGL02",
+					"$(PROJECT_DIR)/openGL03",
+					/usr/local/Cellar/assimp/5.0.1/lib,
+					"$(PROJECT_DIR)/game01/Tools/Libs",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"${glfw_lib}",
+					"${glad_lib}",
+					"${assimp_lib}",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		50C613DA2477C26000DC892B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"${glfw_header}",
+					"${glad_header}",
+					/usr/local/include,
+					"${assimp_header}",
+					/usr/local/include/gml,
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openGL02",
+					"$(PROJECT_DIR)/openGL03",
+					/usr/local/Cellar/assimp/5.0.1/lib,
+					"$(PROJECT_DIR)/game01/Tools/Libs",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"${glad_lib}",
+					"${glfw_lib}",
+					"${assimp_lib}",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50C613CC2477C26000DC892B /* Build configuration list for PBXProject "game02" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C613D62477C26000DC892B /* Debug */,
+				50C613D72477C26000DC892B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C613D82477C26000DC892B /* Build configuration list for PBXNativeTarget "game02" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C613D92477C26000DC892B /* Debug */,
+				50C613DA2477C26000DC892B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50C613C92477C25F00DC892B /* Project object */;
+}
