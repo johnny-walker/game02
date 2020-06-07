@@ -11,7 +11,7 @@
 //#include <string>
 using namespace std;
 
-string path         = string("/users/albert/openGL/game01/game01");
+string path         = string("/users/albert/openGL/game02/game02");
 //shaders
 string vertex01     = path + "/shaders/sprite.vs";
 string fragment01   = path + "/shaders/sprite.fs";
@@ -29,10 +29,12 @@ string ball         = path + "/textures/spirit_bomb.png";
 string particle     = path + "/textures/particle.png";
 
 //levels
+#define TOTAL_LEVELS   4
 string level1       = path + "/levels/one.lvl";
 string level2       = path + "/levels/two.lvl";
 string level3       = path + "/levels/three.lvl";
 string level4       = path + "/levels/four.lvl";
+string testFive     = path + "/levels/five.lvl";
 
 
 Game::Game(unsigned int width, unsigned int height)
@@ -81,14 +83,19 @@ void Game::Init()
     GameLevel two;
     GameLevel three;
     GameLevel four;
-    one.Load(level1.c_str(),    this->Width, this->Height * 0.5);
-    two.Load(level2.c_str(),    this->Width, this->Height * 0.5);
-    three.Load(level3.c_str(),  this->Width, this->Height * 0.5);
-    four.Load(level4.c_str(),   this->Width, this->Height * 0.5);
+    GameLevel testLevel;
+    
+    one.Load(level1.c_str(), this->Width, this->Height * 0.5);
+    two.Load(level2.c_str(), this->Width, this->Height * 0.5);
+    three.Load(level3.c_str(), this->Width, this->Height * 0.5);
+    four.Load(level4.c_str(), this->Width, this->Height * 0.5);
+    testLevel.Load(testFive.c_str(), this->Width, this->Height * 0.5);
+    
     this->Levels.push_back(one);
     this->Levels.push_back(two);
     this->Levels.push_back(three);
     this->Levels.push_back(four);
+    this->Levels.push_back(testLevel);
     this->Level = 2;
     
     // Configure game objects
@@ -121,10 +128,44 @@ void Game::Update(GLfloat dt)
         this->ResetLevel();
         this->ResetPlayer();
     }
+    
+    if (this->State == GAME_ACTIVE && this->Levels[this->Level].IsCompleted())
+    {
+        this->ResetLevel();
+        this->ResetPlayer();
+        //Effects->Chaos = GL_TRUE;
+        this->State = GAME_MENU;
+        this->Level = (this->Level + 1) % TOTAL_LEVELS;
+    }
 }
 
+// press W/S to choose level
+// press Enter to activate the game
+// press Space to release ball
 void Game::ProcessInput(GLfloat dt)
 {
+    if (this->State == GAME_MENU || this->State == GAME_WIN)
+    {
+        if (this->Keys[GLFW_KEY_ENTER] && !this->KeysProcessed[GLFW_KEY_ENTER])
+        {
+            this->State = GAME_ACTIVE;
+            this->KeysProcessed[GLFW_KEY_ENTER] = GL_TRUE;
+        }
+        if (this->Keys[GLFW_KEY_W] && !this->KeysProcessed[GLFW_KEY_W])
+        {
+            this->Level = (this->Level + 1) % TOTAL_LEVELS;
+            this->KeysProcessed[GLFW_KEY_W] = GL_TRUE;
+        }
+        if (this->Keys[GLFW_KEY_S] && !this->KeysProcessed[GLFW_KEY_S])
+        {
+            if (this->Level > 0)
+                --this->Level;
+            else
+                this->Level = 3;
+            this->KeysProcessed[GLFW_KEY_S] = GL_TRUE;
+        }
+    }
+    
     if (this->State == GAME_ACTIVE)
     {
         GLfloat velocity = PLAYER_VELOCITY * dt;
@@ -154,7 +195,7 @@ void Game::ProcessInput(GLfloat dt)
 
 void Game::Render()
 {
-    if (this->State == GAME_ACTIVE)
+    if (this->State == GAME_MENU || this->State == GAME_ACTIVE)
     {
         // Begin rendering to postprocessing quad
         Effects->BeginRender();
@@ -183,7 +224,7 @@ void Game::Render()
 }
 
 void Game::ResetLevel()
-{
+{   /*
     if (this->Level == 0)
         this->Levels[0].Load(level1.c_str(), this->Width, this->Height * 0.5f);
     else if (this->Level == 1)
@@ -192,6 +233,8 @@ void Game::ResetLevel()
         this->Levels[2].Load(level3.c_str(), this->Width, this->Height * 0.5f);
     else if (this->Level == 3)
         this->Levels[3].Load(level4.c_str(), this->Width, this->Height * 0.5f);
+    */
+    this->Levels[this->Level].Load(this->Levels[this->Level].LevelName->c_str(), this->Width, this->Height * 0.5f);
 }
 
 void Game::ResetPlayer()

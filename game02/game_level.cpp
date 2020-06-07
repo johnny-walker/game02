@@ -14,6 +14,7 @@
 
 void GameLevel::Load(const char *file, unsigned int levelWidth, unsigned int levelHeight)
 {
+    LevelName = new string(file);
     // clear old data
     this->Bricks.clear();
     // load from file
@@ -44,12 +45,12 @@ void GameLevel::Draw(SpriteRenderer &renderer)
             tile.Draw(renderer);
 }
 
-bool GameLevel::IsCompleted()
+GLboolean GameLevel::IsCompleted()
 {
     for (GameObject &tile : this->Bricks)
         if (!tile.IsSolid && !tile.Destroyed)
-            return false;
-    return true;
+            return GL_FALSE;
+    return GL_TRUE;
 }
 
 void GameLevel::init(std::vector<std::vector<unsigned int>> tileData, unsigned int levelWidth, unsigned int levelHeight)
